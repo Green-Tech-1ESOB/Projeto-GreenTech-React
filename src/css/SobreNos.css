@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Winky+Sans:ital@0;1&display=swap');
+
 :root {
     --cor-header: #d58a24;
-    --cor-fundo:  #f4f4f4;
+    --cor-fundo: #f4f4f4;
     --cor-texto1: #000000;
     --cor-texto2: #333;
+    ---background-color: floralwhite;
 }
 
 * {
@@ -12,98 +14,31 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
     font-family: "Winky Sans", sans-serif;
- }
+}
 
 body {
     font-family: "Open Sans", sans-serif;
     line-height: 1.6;
-    ---background-color:floralwhite;
+
     background-attachment: fixed;
     background-image: url(../assets/img1.jpeg);
     background-size: cover;
-   
-}
 
-header {
-    background-color: var(--cor-header); 
-    padding: 0.5rem 0; 
-    position: sticky; 
-    top: 0;
-    z-index: 1000;
-}
-
-.cabecalho-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-
-.main-menu a.active {
-    font-weight: bold; 
-    color: #302f2f;
-  }
-
-.logo a {
-    display: flex; 
-    align-items: center; 
-    color: #f4f4f4;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.logo a:hover {
-    color: #dbdbdb; 
-}
-
-.logo-imagem {
-    height: 3.5rem;
-    margin-right: 0.5rem; 
-    vertical-align: middle; 
-}
-
-.logo-texto {
-    font-size: 1.7rem;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    text-align: right; 
-    margin: 0; 
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 0 0 15px; 
-}
-
-nav ul li a {
-    color: #f4f4f4;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #dbdbdb;
-    text-decoration: underline; 
 }
 
 main {
-    padding: 0 20px; 
+    padding: 0 20px;
 }
 
 #banner {
     color: var(--cor-fundo);
     text-align: center;
     padding: 5rem 1rem;
-    margin: 20px -20px; 
+    margin: 20px -20px;
 }
 
 #banner h1 {
@@ -117,16 +52,16 @@ main {
 
 section {
     padding: 2rem 0;
-    margin-bottom: 1rem;  
-    padding: 2rem 20px; 
+    margin-bottom: 1rem;
+    padding: 2rem 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: var(--cor-texto1); 
+    color: var(--cor-texto1);
 }
 
 footer {
@@ -142,19 +77,19 @@ footer {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .logo {
         margin-bottom: 10px;
     }
-    
+
     nav {
         width: 100%;
     }
-    
+
     nav ul {
         text-align: left;
     }
-    
+
     nav ul li {
         display: block;
         margin: 10px 0;
@@ -200,7 +135,8 @@ footer {
     margin-top: 2rem;
 }
 
-.botao-primario, .botao-secundario {
+.botao-primario,
+.botao-secundario {
     display: inline-block;
     padding: 10px 20px;
     margin: 0 10px;
@@ -211,12 +147,12 @@ footer {
 }
 
 .botao-primario {
-    background-color: #FFC107; 
+    background-color: #FFC107;
     color: #333;
 }
 
 .botao-primario:hover {
-    background-color: #FFA000; 
+    background-color: #FFA000;
 }
 
 #sobre .conteudo-secao {
@@ -224,65 +160,67 @@ footer {
     flex-direction: column;
     gap: 2rem;
     align-items: flex-start;
-    
-} 
 
-.sobre-conteudo {
-    
-        padding: 3rem 1rem;
-        max-width: 1000px;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 2rem;
-        flex: 1 1 300px;
 }
 
-    .sobre-conteudo p {
-        font-size: 1rem;
+.sobre-conteudo {
+
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    flex: 1 1 300px;
+}
+
+.sobre-conteudo p {
+    font-size: 1rem;
     line-height: 1.6;
     color: #ffffff;
-    margin-bottom: 1rem;   
+    margin-bottom: 1rem;
     gap: 2rem;
     align-items: flex-start;
     background-color: #85632344;
     padding: 2rem;
     border-radius: 10px;
-    flex-wrap: wrap; /* para funcionar bem em telas menores */
+    flex-wrap: wrap;
+    /* para funcionar bem em telas menores */
     max-width: 1000px;
     margin: 0 auto;
-    }
+}
 
 .sobre-valores {
     display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  background-color: #85632344;
-  padding: 2rem;
-  border-radius: 10px;
-  flex-wrap: wrap; /* para funcionar bem em telas menores */
-  max-width: 1000px;
-  margin: 0 auto;
- 
+    gap: 2rem;
+    align-items: flex-start;
+    background-color: #85632344;
+    padding: 2rem;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    /* para funcionar bem em telas menores */
+    max-width: 1000px;
+    margin: 0 auto;
+
 }
 
 .sobre-valores h3 {
     color: var(--cor-texto1);
     margin-bottom: 1rem;
     text-align: center;
-  
+
 }
 
 .valor-item {
     display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .valor-icone {
     font-size: 1.5rem;
-  margin-top: 0.3rem;
+    margin-top: 0.3rem;
 }
 
 .valor-texto h4 {
@@ -307,7 +245,7 @@ footer {
 
 .servico-cartao:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .servico-icone {
@@ -327,29 +265,30 @@ footer {
     object-fit: cover;
 }
 
-.tittle-sobrenos{
-        display: flex;
-        align-items: center;
-        justify-content: space-between; /* ou use flex-start */
-      
+.tittle-sobrenos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* ou use flex-start */
+
 }
 
-.card1{
+.card1 {
     margin: 5px;
-  border: 4px solid #6b4102a9;
-  float: left;
-  width: 180px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border-radius: 6px;
+    border: 4px solid #6b4102a9;
+    float: left;
+    width: 180px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 6px;
 }
 
-.card1:hover{
-   
+.card1:hover {
+
     transform: scale(1.03);
-  box-shadow: 0 6px 12px rgba(219, 216, 216, 0.15);
+    box-shadow: 0 6px 12px rgba(219, 216, 216, 0.15);
 }
 
-.card-text{
+.card-text {
     padding: 15px;
     text-align: center;
     color: #fff;
@@ -359,10 +298,10 @@ footer {
 @media (max-width: 992px) {
     #sobre .conteudo-secao {
         display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: flex-start;
-    
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+
     }
 }
 
@@ -370,7 +309,9 @@ footer {
     .contato-conteudo {
         flex-direction: column;
     }
-    .botao-primario, .botao-secundario {
+
+    .botao-primario,
+    .botao-secundario {
         display: block;
         margin: 10px 0;
         text-align: center;
@@ -379,62 +320,59 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .valores-conteudo > div {
-      flex-direction: column;
-      align-items: center;
+    .valores-conteudo>div {
+        flex-direction: column;
+        align-items: center;
     }
-  }
+}
 
-  .breadcrumb {
+.breadcrumb {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 18px; /* Aumentado de 15px para 18px */
+    font-size: 18px;
+    /* Aumentado de 15px para 18px */
     font-weight: 500;
     margin: 20px 40px;
     padding: 10px 0;
     color: #333;
     flex-wrap: wrap;
-  
+
     /* Fade-in */
     opacity: 0;
     animation: fadeInBreadcrumb 0.8s ease forwards;
-  }
-  
-  /* Fade-in animation */
-  @keyframes fadeInBreadcrumb {
+}
+
+/* Fade-in animation */
+@keyframes fadeInBreadcrumb {
     from {
-      opacity: 0;
-      transform: translateY(-5px);
+        opacity: 0;
+        transform: translateY(-5px);
     }
+
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  .breadcrumb a {
+}
+
+.breadcrumb a {
     text-decoration: none;
     color: #e0871a;
     transition: color 0.2s ease;
-  }
-  
-  .breadcrumb a:hover {
+}
+
+.breadcrumb a:hover {
     color: #c96c00;
     text-decoration: underline;
-  }
-  
-  .breadcrumb .separator {
+}
+
+.breadcrumb .separator {
     color: #888;
     font-size: 18px;
-  }
-  
-  .breadcrumb .current {
+}
+
+.breadcrumb .current {
     color: #302f2f;
     font-weight: 600;
-  }
-
-  
-  
-
-  
+}

@@ -1,37 +1,10 @@
-import Logo from './assets/logo_greentech.png';
-import './css/App.css';
+import { Header } from './components/header';
 import "./css/Servicos.css";
 
-function Servicos() {
-
-  
+export function Servicos() {
   return (
     <>
-      <header>
-        <div className="cabecalho-container">
-          <div className="logo">
-            <a href="/">
-              <img
-                src={Logo}
-                alt="Logo GreenTech"
-                className="logo-imagem"
-              />
-              <span className="logo-texto">GreenTech</span>
-            </a>
-          </div>
-          <nav className="main-menu">
-            <ul>
-              <li><a href="/">Início</a></li>
-              <li><a href="/sobrenos">Sobre Nós</a></li>
-              <li><a href="/servicos">Serviços</a></li>
-              <li><a href="/contato">Contato</a></li>
-              <li><a href="/login">Login</a></li>
-              <li><a href="/cadastro">Cadastro</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
+      <Header />
       <main>
         <section className="form-container">
           <div className="description">

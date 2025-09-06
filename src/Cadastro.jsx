@@ -1,35 +1,13 @@
 import "./css/Cadastro.css";
 import Logo from './assets/logo_greentech.png';
 import "./css/App.css";
+import { Header } from "./components/header";
 
-function Cadastro() {
+export function Cadastro() {
 
   return (
     <>
-      <header>
-              <div className="cabecalho-container">
-                <div className="logo">
-                  <a href="/">
-                    <img
-                      src={Logo}
-                      alt="Logo GreenTech"
-                      className="logo-imagem"
-                    />
-                    <span className="logo-texto">GreenTech</span>
-                  </a>
-                </div>
-                <nav className="main-menu">
-                  <ul>
-                    <li><a href="/">Início</a></li>
-                    <li><a href="/sobrenos">Sobre Nós</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </header>
+      <Header />
 
       <main>
         <div id="formulario">
