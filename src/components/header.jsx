@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom"
 import Logo from '../assets/logo_greentech.png';
 import './header.css'
 
+import Link from "./Link";
+
 export const Header = () => {
     const navigator = useNavigate()
 
@@ -9,23 +11,23 @@ export const Header = () => {
         <header>
             <div className="cabecalho-container">
                 <div className="logo">
-                    <a href="/">
+                    <Link onClick={() => navigator('/')}>
                         <img
                             src={Logo}
                             alt="Logo GreenTech"
                             className="logo-imagem"
                         />
                         <span className="logo-texto">GreenTech</span>
-                    </a>
+                    </Link>
                 </div>
                 <nav className="main-menu">
                     <ul>
-                        <li><a onClick={() => navigator('/')}>Início</a></li>
-                        <li><a onClick={() => navigator('/sobre-nos')}>Sobre Nós</a></li>
-                        <li><a onClick={() => navigator('/servicos')}>Serviços</a></li>
-                        <li><a onClick={() => navigator('/contato')}>Contato</a></li>
-                        <li><a onClick={() => navigator('/login')}>Login</a></li>
-                        <li><a onClick={() => navigator('/cadastro')}>Cadastro</a></li>
+                        <li><Link onClick={() => navigator('/')}>Início</Link></li>
+                        <li><Link onClick={() => navigator('/sobre-nos')}>Sobre Nós</Link></li>
+                        <li><Link onClick={() => navigator('/servicos')}>Serviços</Link></li>
+                        <li><Link onClick={() => navigator('/contato')}>Contato</Link></li>
+                        <li><Link onClick={() => navigator('/login')}>Login</Link></li>
+                        <li><Link onClick={() => navigator('/cadastro')}>Cadastro</Link></li>
                     </ul>
                 </nav>
             </div>
