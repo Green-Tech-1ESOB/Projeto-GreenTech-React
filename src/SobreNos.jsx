@@ -3,6 +3,9 @@ import Img4 from './assets/img4.jpg';
 import Img3 from './assets/img3.jpg';
 import './css/SobreNos.css';
 import { Header } from './components/header';
+import { Paragraph } from './components/TextComponents';
+import Span from './components/Span';
+import Footer from './components/Footer';
 
 function SobreNos() {
 
@@ -13,14 +16,14 @@ function SobreNos() {
         <section id="sobre">
           <nav className="breadcrumb" aria-label="breadcrumb">
             <a href="App.jsx">Início</a>
-            <span className="separator">›</span>
-            <span className="current">Sobre Nós</span>
+            <Span className="separator">›</Span>
+            <Span className="current">Sobre Nós</Span>
           </nav>
 
           <h2>Sobre Nós</h2>
           <div className="conteudo-secao">
             <div className="sobre-conteudo">
-              <p>
+              <Paragraph>
                 Na <strong>GreenTech</strong> acreditamos que o futuro do agronegócio é digital — e estamos aqui para liderar essa transformação.
                 Somos uma startup brasileira dedicada a conectar o campo<br />
                 à tecnologia de forma inteligente, prática e eficiente. Nossa missão é impulsionar a produtividade no campo por meio de soluções tecnológicas que simplificam a gestão agrícola e<br />
@@ -28,7 +31,7 @@ function SobreNos() {
                 Com sensores inteligentes, monitoramento remoto e plataformas de gestão intuitivas, levamos o agronegócio a um novo nível de performance.<br /><br />
                 Mais do que tecnologia, entregamos resultados que fazem a diferença no dia a dia do produtor.<br />
                 Conectamos o agro ao futuro com inovação, compromisso e paixão.
-              </p>
+              </Paragraph>
             </div>
 
             <div className="sobre-valores">
@@ -38,32 +41,32 @@ function SobreNos() {
                   <div className="card1" style={{ width: "18rem" }}>
                     <img src={Img5} className="card-img-top" alt="Sustentabilidade" />
                     <div className="card-body">
-                      <p className="card-text">
+                      <Paragraph className="card-text">
                         <strong>Sustentabilidade 🌱 </strong><br />
                         Desenvolvemos soluções que respeitam o meio ambiente.
-                      </p>
+                      </Paragraph>
                     </div>
                   </div>
 
                   <div className="card1" style={{ width: "18rem" }}>
                     <img src={Img3} className="card-img-top" alt="Inovação" />
                     <div className="card-body">
-                      <p className="card-text">
+                      <Paragraph className="card-text">
                         <strong>Inovação 💡 </strong><br />
                         Software personalizado, que se adapta a necessidade de<br />
                         cada produtor.
-                      </p>
+                      </Paragraph>
                     </div>
                   </div>
 
                   <div className="card1" style={{ width: "18rem" }}>
                     <img src={Img4} className="card-img-top" alt="Parceria" />
                     <div className="card-body">
-                      <p className="card-text">
+                      <Paragraph className="card-text">
                         <strong>Parceria 🤝 </strong><br />
                         Apoiamos pequenos e médios agricultores que sofrem<br />
                         com questões climáticas.
-                      </p>
+                      </Paragraph>
                     </div>
                   </div>
                 </div>
@@ -73,9 +76,7 @@ function SobreNos() {
         </section>
       </main>
 
-      <footer>
-        <p>&copy; 2025 GreenTech. Todos os direitos reservados.</p>
-      </footer>
+      <Footer />
     </>
   );
 }

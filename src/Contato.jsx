@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import "./css/Contato.css";
 import { Header } from './components/header';
+import Input from './components/input';
+import { Title, Paragraph } from './components/TextComponents';
+import Span from './components/Span';
+import Button from './components/Button';
 
 function Contato() {
   const [nome, setNome] = useState('');
@@ -73,37 +77,37 @@ function Contato() {
       <main>
         <div id="formulario">
           <div className="titulo">
-            <h1>Fale conosco!</h1>
-            <p>Estamos à disposição para responder suas dúvidas.</p>
+            <Title>Fale conosco!</Title>
+            <Paragraph>Estamos à disposição para responder suas dúvidas.</Paragraph>
           </div>
 
           <form className="forms" onSubmit={handleSubmit}>
-            <label htmlFor="nome">Nome Completo</label>
-            <input
+            <Input
               type="text"
               id="nome"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
               onBlur={handleBlur}
+              label="Nome Completo"
             />
-            <span id="erro_nome">{erroNome}</span>
+            <Span id="erro_nome">{erroNome}</Span>
 
-            <label htmlFor="email">E-mail</label>
-            <input
+            <Input
               type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onBlur={handleBlur}
+              label="E-mail"
             />
-            <span id="erro_email">{erroEmail}</span>
+            <Span id="erro_email">{erroEmail}</Span>
 
-            <label htmlFor="titulo">Título</label>
-            <input
+            <Input
               type="text"
               id="titulo"
               value={titulo}
               onChange={(e) => setTitulo(e.target.value)}
+              label="Título"
             />
 
             <label htmlFor="mensagem">Mensagem</label>
@@ -116,9 +120,9 @@ function Contato() {
               onChange={(e) => setMensagem(e.target.value)}
               onBlur={handleBlur}
             ></textarea>
-            <span id="erro_mensagem">{erroMensagem}</span>
+            <Span id="erro_mensagem">{erroMensagem}</Span>
 
-            <button type="submit" id="enviar">ENVIAR</button>
+            <Button type="submit" id="enviar">ENVIAR</Button>
           </form>
         </div>
       </main>

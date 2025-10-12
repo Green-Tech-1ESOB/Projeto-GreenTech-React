@@ -1,6 +1,11 @@
 import "./css/Login.css";
 import Fundo from './assets/img1.jpeg'
 
+import Input from './components/input';
+import { Subtitle } from "./components/TextComponents";
+import Span from "./components/Span";
+import Button from "./components/Button";
+
 function Login() {
   return (
     <div className="container">
@@ -13,20 +18,17 @@ function Login() {
       </div>
 
       <div className="container_forms">
-        <h2>Login</h2>
+        <Subtitle>Login</Subtitle>
 
         <div className="forms">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" />
+          <Input type="email" id="email" label="Email" />
+          <Input type="number" id="senha" label="Senha" />
 
-          <label htmlFor="senha">Senha</label>
-          <input type="number" id="senha" />
+          <Button>Entrar</Button>
 
-          <button>Entrar</button>
-
-          <span>
+          <Span>
             Ainda não tem Login? <a href="#">Cadastre-se</a>
-          </span>
+          </Span>
         </div>
       </div>
     </div>
