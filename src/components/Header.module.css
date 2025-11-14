@@ -1,12 +1,12 @@
-header {
+.header {
     background-color: var(--cor-header);
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.cabecalho-container {
+.cabecalhoContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,53 +15,56 @@ header {
     padding: 0 20px;
 }
 
-.main-menu a.active {
+.mainMenu a.active {
     font-weight: bold;
-    color: #302f2f;
+    color: var(--cor-fundo);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .logo a {
     display: flex;
     align-items: center;
-    color: #f4f4f4;
+    color: var(--cor-fundo);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .logo a:hover {
-    color: #dbdbdb;
+    color: #ffffff;
 }
 
-.logo-imagem {
+.logoImagem {
     height: 3.5rem;
     margin-right: 0.5rem;
     vertical-align: middle;
 }
 
-.logo-texto {
+.logoTexto {
     font-size: 1.7rem;
     font-weight: bold;
 }
 
-nav ul {
+.mainMenu ul {
     list-style: none;
     text-align: right;
     margin: 0;
+    display: flex;
+    gap: 15px;
 }
 
-nav ul li {
+.mainMenu ul li {
     display: inline;
-    margin: 0 0 0 15px;
 }
 
-nav ul li a {
-    color: #f4f4f4;
+.mainMenu a {
+    color: var(--cor-fundo);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #dbdbdb;
-    text-decoration: underline;
+.mainMenu a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--cor-fundo);
 }

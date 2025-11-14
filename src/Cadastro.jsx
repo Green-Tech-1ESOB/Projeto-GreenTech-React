@@ -1,6 +1,5 @@
-import "./css/Cadastro.css";
+import styles from "./css/Cadastro.module.css";
 import Logo from './assets/logo_greentech.png';
-import "./css/App.css";
 import { Header } from "./components/header";
 import Input from "./components/input";
 import { Title, Paragraph } from "./components/TextComponents";
@@ -13,14 +12,14 @@ export function Cadastro() {
     <>
       <Header />
 
-      <main>
-        <div id="formulario">
-          <div className="titulo">
+      <main className={styles.main}>
+        <div className={styles.formulario}>
+          <div className={styles.titulo}>
             <Title>Cadastre-se</Title>
             <Paragraph>Faça o seu cadastro aqui para obter uma resposta personalizada!</Paragraph>
           </div>
 
-          <div className="forms">
+          <div className={styles.forms}>
             <Input type="text" id="nome" label="Nome Completo" />
             <Span id="erro_nome"></Span>
 
@@ -30,7 +29,7 @@ export function Cadastro() {
             <Input type="password" id="senha" label="Senha" />
             <Span id="erro_mensagem"></Span>
 
-            <Input type="submit" id="enviar" value="ENVIAR" />
+            <Input type="submit" className={styles.formsEnvia} id="enviar" value="ENVIAR" />
           </div>
         </div>
       </main>

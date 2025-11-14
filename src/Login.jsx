@@ -1,4 +1,4 @@
-import "./css/Login.css";
+import styles from "./css/Login.module.css";
 import Fundo from './assets/img1.jpeg'
 
 import Input from './components/input';
@@ -8,19 +8,19 @@ import Button from "./components/Button";
 
 function Login() {
   return (
-    <div className="container">
-      <div className="container_imagem">
+    <div className={styles.container}>
+      <div className={styles.container_imagem}>
         <img
-          className="imagem"
+          className={styles.imagem}
           src={Fundo}
           alt="Imagem de uma fazenda"
         />
       </div>
 
-      <div className="container_forms">
+      <div className={styles.container_forms}>
         <Subtitle>Login</Subtitle>
 
-        <div className="forms">
+        <div className={styles.forms}>
           <Input type="email" id="email" label="Email" />
           <Input type="number" id="senha" label="Senha" />
 

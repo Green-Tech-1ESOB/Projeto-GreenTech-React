@@ -20,31 +20,81 @@ h3 {
 }
 
 body {
-    min-height: 100vh;
-    font-family: "Open Sans", sans-serif;
     line-height: 1.6;
     color: var(--cor-texto2);
     background-color: var(--cor-fundo);
 }
 
-main {
+header {
+    background-color: var(--cor-header);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.cabecalho-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-#banner {
-    color: var(--cor-fundo);
-    text-align: center;
-    padding: 5rem 1rem;
-    margin: 20px -20px;
+.main-menu a.active {
+    font-weight: bold;
+    color: #302f2f;
 }
 
-#banner h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+.logo a {
+    display: flex;
+    align-items: center;
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-#banner p {
-    font-size: 1.2rem;
+.logo a:hover {
+    color: #dbdbdb;
+}
+
+.logo-imagem {
+    height: 3.5rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.logo-texto {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #dbdbdb;
+    text-decoration: underline;
+}
+
+main {
+    padding: 0 20px;
 }
 
 section {
@@ -70,6 +120,26 @@ footer {
     margin-top: 2rem;
 }
 
+.botao-primario,
+.botao-secundario {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botao-primario {
+    background-color: #FFC107;
+    color: #333;
+}
+
+.botao-primario:hover {
+    background-color: #FFA000;
+}
+
 @media (max-width: 768px) {
     .cabecalho-container {
         flex-direction: column;
@@ -91,149 +161,6 @@ footer {
     nav ul li {
         display: block;
         margin: 10px 0;
-    }
-
-    #banner h1 {
-        font-size: 2rem;
-    }
-
-    #banner p {
-        font-size: 1rem;
-    }
-}
-
-.banner-conteudo {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#banner {
-    background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-    position: relative;
-    padding: 6rem 1rem;
-}
-
-#banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.banner-conteudo {
-    position: relative;
-    z-index: 2;
-}
-
-.banner-chamada-acao {
-    margin-top: 2rem;
-}
-
-.botao-primario,
-.botao-secundario {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.botao-primario {
-    background-color: #FFC107;
-    color: #333;
-}
-
-.botao-primario:hover {
-    background-color: #FFA000;
-}
-
-#sobre .conteudo-secao {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: flex-start;
-}
-
-.sobre-conteudo {
-    flex: 1;
-    min-width: 300px;
-}
-
-.sobre-valores {
-    flex: 1;
-    min-width: 300px;
-    background-color: #E8F5E9;
-    padding: 1.5rem;
-    border-radius: 5px;
-}
-
-.sobre-valores h3 {
-    color: var(--cor-texto1);
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.valor-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-}
-
-.valor-icone {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-}
-
-.valor-texto h4 {
-    color: var(--cor-texto1);
-    margin-bottom: 0.3rem;
-}
-
-.servicos-grade {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.servico-cartao {
-    background-color: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.servico-cartao:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.servico-icone {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.servico-cartao h3 {
-    color: var(--cor-texto1);
-    margin-bottom: 0.5rem;
-}
-
-.botao2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-@media (max-width: 992px) {
-    #sobre .conteudo-secao {
-        flex-direction: column;
     }
 }
 

@@ -1,21 +1,24 @@
 .title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #222;
+    color: var(--cor-texto1);
     margin-bottom: 0.5rem;
+    font-family: "Winky Sans", sans-serif;
 }
 
 .subtitle {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #444;
+    color: var(--cor-texto1);
     margin-bottom: 0.5rem;
+    font-family: "Winky Sans", sans-serif;
 }
 
 .paragraph {
     font-size: 1rem;
     font-weight: 400;
-    color: #555;
+    color: var(--cor-texto2);
     line-height: 1.6;
     margin-bottom: 1rem;
+    font-family: "Open Sans", sans-serif;
 }

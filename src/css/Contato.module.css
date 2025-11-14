@@ -1,35 +1,9 @@
-:root {
-    --cor-header: #d58a24;
-    --cor-fundo: #f4f4f4;
-    --cor-texto1: #3e6606;
-    --cor-texto2: #333;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-h1,
-h2,
-h3 {
-    font-family: "Winky Sans", sans-serif;
-}
-
-body {
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.6;
-    color: var(--cor-texto2);
-    background-color: var(--cor-fundo);
-}
-
-main {
+.main {
     width: 100%;
     background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
 }
 
-main::before {
+.main::before {
     content: '';
     position: absolute;
     top: 0;
@@ -39,7 +13,7 @@ main::before {
     background-color: rgba(0, 0, 0, 0.267);
 }
 
-#formulario {
+.formulario {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -57,7 +31,7 @@ main::before {
     padding: 2em 1.5em;
 }
 
-#formulario .titulo {
+.formulario .titulo {
     margin-bottom: 1%;
 }
 
@@ -96,7 +70,7 @@ main::before {
     color: #b44848;
 }
 
-#enviar:hover {
+.enviar:hover {
     color: var(--cor-fundo);
     background-color: var(--cor-header);
     cursor: pointer;
@@ -104,7 +78,7 @@ main::before {
 
 
 @media (max-width: 768px) {
-    #formulario {
+    .formulario {
         top: 5%;
         height: auto;
         padding: 2em 1em;
@@ -116,7 +90,7 @@ main::before {
 }
 
 @media (max-width: 480px) {
-    #formulario {
+    .formulario {
         top: 3%;
     }
 }

@@ -1,24 +1,23 @@
 import Imagem1 from "../assets/img3.jpg";
 import Imagem2 from "../assets/img4.jpg";
 import Imagem3 from "../assets/img5.jpg";
-import './colunas.css';
+import styles from './Colunas.module.css'; 
 
 export const Colunas = () => {
 
     return(
-        <main className="board">
+        <main className={styles.board}> {/* Usa styles.board */}
       {/* Preparação */}
-      <div className="column">
+      <div className={styles.column}> {/* Usa styles.column */}
         <h3>Preparação</h3>
         <hr />
         <img src={Imagem1} alt="Imagem" />
 
-        <div className="linhas">
+        <div className={styles.linhas}> {/* Usa styles.linhas */}
           <div>
             <input type="checkbox" id="prep1" />
             <label htmlFor="prep1">Limpar o solo</label>
           </div>
-
           <div>
             <input type="checkbox" id="prep2" />
             <label htmlFor="prep2">Adubar o solo</label>

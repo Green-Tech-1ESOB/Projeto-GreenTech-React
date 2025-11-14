@@ -1,7 +1,7 @@
-
+import './css/App.css'
 import { useNavigate } from 'react-router-dom';
 import { Header } from './components/header';
-import './css/App.css';
+import styles from './css/Home.module.css';
 import { Subtitle, Title, Paragraph } from './components/TextComponents';
 import Footer from './components/Footer';
 import Link from './components/Link';
@@ -13,11 +13,11 @@ function Home() {
         <>
             <Header />
             <main>
-                <section id="banner">
-                    <div className="banner-conteudo">
+                <section className={styles.banner}>
+                    <div className={styles.bannerConteudo}>
                         <Title>Bem-vindo à GreenTech</Title>
                         <Paragraph>Inovação e tecnologia para transformar o agronegócio brasileiro</Paragraph>
-                        <div className="banner-chamada-acao">
+                        <div className={styles.bannerChamadaAcao}>
                             <Link onClick={() => navigator('/servicos')} className="botao-primario">
                                 Conheça nossas soluções
                             </Link>
@@ -27,8 +27,8 @@ function Home() {
 
                 <section id="sobre">
                     <Subtitle>Problema/Solução</Subtitle>
-                    <div className="conteudo-secao">
-                        <div className="sobre-conteudo">
+                    <div className={styles.sobreConteudoSecao}>
+                        <div className={styles.sobreConteudo}>
                             <Paragraph>
                                 Pequenos agricultores enfrentam diariamente desafios que
                                 comprometem sua produtividade e sustentabilidade. A falta de
@@ -59,11 +59,11 @@ function Home() {
                                 os dias.
                             </Paragraph>
                         </div>
-                        <div className="sobre-valores">
+                        <div className={styles.sobreValores}>
                             <h3>Nossos Valores</h3>
-                            <div className="valor-item">
-                                <span className="valor-icone">🌱</span>
-                                <div className="valor-texto">
+                            <div className={styles.valorItem}>
+                                <span className={styles.valorIcone}>🌱</span>
+                                <div className={styles.valorTexto}>
                                     <h4>Sustentabilidade</h4>
                                     <Paragraph>
                                         Desenvolvemos soluções que respeitam o meio ambiente e
@@ -71,9 +71,9 @@ function Home() {
                                     </Paragraph>
                                 </div>
                             </div>
-                            <div className="valor-item">
-                                <span className="valor-icone">💡</span>
-                                <div className="valor-texto">
+                            <div className={styles.valorItem}>
+                                <span className={styles.valorIcone}>💡</span>
+                                <div className={styles.valorTexto}>
                                     <h4>Inovação</h4>
                                     <Paragraph>
                                         Buscamos constantemente novas tecnologias e métodos para
@@ -81,9 +81,9 @@ function Home() {
                                     </Paragraph>
                                 </div>
                             </div>
-                            <div className="valor-item">
-                                <span className="valor-icone">🤝</span>
-                                <div className="valor-texto">
+                            <div className={styles.valorItem}>
+                                <span className={styles.valorIcone}>🤝</span>
+                                <div className={styles.valorTexto}>
                                     <h4>Parceria</h4>
                                     <Paragraph>
                                         Trabalhamos lado a lado com produtores rurais, entendendo
@@ -97,9 +97,9 @@ function Home() {
 
                 <section id="servicos">
                     <Subtitle>Nossos Serviços</Subtitle>
-                    <div className="servicos-grade">
-                        <div className="servico-cartao">
-                            <div className="servico-icone">🛰️</div>
+                    <div className={styles.servicosGrade}>
+                        <div className={styles.servicoCartao}>
+                            <div className={styles.servicoIcone}>🛰️</div>
                             <h3>Monitoramento por Satélite</h3>
                             <Paragraph>
                                 Acompanhamento em tempo real da saúde das plantações,
@@ -107,8 +107,8 @@ function Home() {
                                 produtividade por área.
                             </Paragraph>
                         </div>
-                        <div className="servico-cartao">
-                            <div className="servico-icone">💧</div>
+                        <div className={styles.servicoCartao}>
+                            <div className={styles.servicoIcone}>💧</div>
                             <h3>Irrigação Inteligente</h3>
                             <Paragraph>
                                 Sistemas automatizados que otimizam o uso da água, reduzindo
@@ -116,16 +116,16 @@ function Home() {
                                 cultura.
                             </Paragraph>
                         </div>
-                        <div className="servico-cartao">
-                            <div className="servico-icone">📊</div>
+                        <div className={styles.servicoCartao}>
+                            <div className={styles.servicoIcone}>📊</div>
                             <h3>Análise de Dados</h3>
                             <Paragraph>
                                 Processamento avançado de informações para tomada de decisões
                                 estratégicas, previsão de safras e otimização de recursos.
                             </Paragraph>
                         </div>
-                        <div className="servico-cartao">
-                            <div className="servico-icone">🤖</div>
+                        <div className={styles.servicoCartao}>
+                            <div className={styles.servicoIcone}>🤖</div>
                             <h3>Automação Rural</h3>
                             <Paragraph>
                                 Implementação de sistemas automatizados para controle de
@@ -134,7 +134,7 @@ function Home() {
                             </Paragraph>
                         </div>
                     </div>
-                    <div className="botao2">
+                    <div className={styles.botao2}>
                         <Link
                             href="https://youtu.be/dDlZ1CP9PAk?si=2MGB8tjtEXtFAG7T"
                             target="_blank"

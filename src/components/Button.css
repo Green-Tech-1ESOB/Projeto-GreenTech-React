@@ -1,7 +1,7 @@
 .custom-button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--cor-header, #d58a24); 
+    color: var(--cor-fundo, #f4f4f4); 
     font-size: 16px;
     font-weight: 600;
     border: none;
@@ -11,8 +11,9 @@
 }
 
 .custom-button:hover {
-    background-color: #0056b3;
+    background-color: var(--cor-texto1, #3e6606); 
     transform: translateY(-2px);
+    color: var(--cor-fundo, #f4f4f4); 
 }
 
 .custom-button:active {

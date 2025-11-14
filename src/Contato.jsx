@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import "./css/Contato.css";
 import { Header } from './components/header';
 import Input from './components/input';
 import { Title, Paragraph } from './components/TextComponents';
 import Span from './components/Span';
 import Button from './components/Button';
+import styles from "./css/Contato.module.css";
 
 function Contato() {
   const [nome, setNome] = useState('');
@@ -22,7 +22,6 @@ function Contato() {
   };
 
   const handleBlur = () => {
-    // Valida o nome completo
     const palavras = nome.trim().split(/\s+/);
     if (palavras.length < 2) {
       setErroNome("Digite seu nome completo!");
@@ -30,14 +29,12 @@ function Contato() {
       setErroNome('');
     }
 
-    // Valida o email
     if (!validarEmail(email)) {
       setErroEmail("Digite um e-mail válido!");
     } else {
       setErroEmail('');
     }
 
-    // Valida a mensagem
     if (mensagem.trim().length < 30) {
       setErroMensagem("Você deve escrever pelo menos 30 caracteres!");
     } else {
@@ -48,7 +45,6 @@ function Contato() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Re-valida todos os campos antes de enviar
     handleBlur();
 
     if (nome === "" || email === "" || titulo === "" || mensagem === "") {
@@ -59,7 +55,7 @@ function Contato() {
       alert("Enviado com sucesso!");
       setFormEnviado(true);
 
-      // Limpa os campos após o envio bem-sucedido
+
       setNome('');
       setEmail('');
       setTitulo('');
@@ -74,14 +70,14 @@ function Contato() {
     <>
       <Header />
 
-      <main>
-        <div id="formulario">
-          <div className="titulo">
+      <main className={styles.main}>
+        <div className={styles.formulario}>
+          <div className={styles.titulo}>
             <Title>Fale conosco!</Title>
             <Paragraph>Estamos à disposição para responder suas dúvidas.</Paragraph>
           </div>
 
-          <form className="forms" onSubmit={handleSubmit}>
+          <form className={styles.forms} onSubmit={handleSubmit}>
             <Input
               type="text"
               id="nome"
@@ -122,7 +118,7 @@ function Contato() {
             ></textarea>
             <Span id="erro_mensagem">{erroMensagem}</Span>
 
-            <Button type="submit" id="enviar">ENVIAR</Button>
+            <Button type="submit" id="enviar" className={styles.enviar}>ENVIAR</Button>
           </form>
         </div>
       </main>

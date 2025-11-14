@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import Logo from '../assets/logo_greentech.png';
-import './header.css'
+import styles from './Header.module.css';
 
 import Link from "./Link";
 
@@ -8,19 +8,19 @@ export const Header = () => {
     const navigator = useNavigate()
 
     return (
-        <header>
-            <div className="cabecalho-container">
-                <div className="logo">
+        <header className={styles.header}> {/* Usa styles.header */}
+            <div className={styles.cabecalhoContainer}> {/* Usa styles.cabecalhoContainer */}
+                <div className={styles.logo}> {/* Usa styles.logo */}
                     <Link onClick={() => navigator('/')}>
                         <img
                             src={Logo}
                             alt="Logo GreenTech"
-                            className="logo-imagem"
+                            className={styles.logoImagem}
                         />
-                        <span className="logo-texto">GreenTech</span>
+                        <span className={styles.logoTexto}>GreenTech</span> {/* Usa styles.logoTexto */}
                     </Link>
                 </div>
-                <nav className="main-menu">
+                <nav className={styles.mainMenu}> {/* Usa styles.mainMenu */}
                     <ul>
                         <li><Link onClick={() => navigator('/')}>Início</Link></li>
                         <li><Link onClick={() => navigator('/sobre-nos')}>Sobre Nós</Link></li>
